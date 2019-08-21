@@ -1,0 +1,24 @@
+//UI의 전체적인 틀 설정//
+import React from 'react';
+import styles from './PageTemplate.scss';
+import classNames from 'classnames/bind';   
+const cx=classNames.bind(styles); 
+
+const PageTemplate =({children}) => {    //stateless 함수 -> children이 props 역할 
+                                       
+
+    return(
+
+            <div className={cx('page-template')}>
+                    <h1>일정 관리</h1>
+                    <div className={cx('content')}>
+                        {children}
+                    </div>
+                    
+                </div>
+        );
+    
+};
+
+
+export default PageTemplate;
